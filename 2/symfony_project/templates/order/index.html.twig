@@ -9,7 +9,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>CreatedAt</th>
+                <th>Date</th>
                 <th>TotalPrice</th>
                 <th>actions</th>
             </tr>
@@ -18,7 +18,7 @@
         {% for order in orders %}
             <tr>
                 <td>{{ order.id }}</td>
-                <td>{{ order.createdAt ? order.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ order.date ? order.date|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ order.totalPrice }}</td>
                 <td>
                     <a href="{{ path('app_order_show', {'id': order.id}) }}">show</a>

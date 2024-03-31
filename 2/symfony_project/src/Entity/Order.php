@@ -15,7 +15,7 @@ class Order
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?\DateTimeImmutable $createdAt = null;
+    private ?\DateTimeImmutable $date = null;
 
     #[ORM\Column]
     private ?float $totalPrice = null;
@@ -29,14 +29,14 @@ class Order
         return $this->id;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
+    public function getDate(): ?\DateTimeImmutable
     {
-        return $this->createdAt;
+        return $this->date;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $createdAt): static
+    public function setDate(\DateTimeImmutable $date): static
     {
-        $this->createdAt = $createdAt;
+        $this->date = $date;
 
         return $this;
     }

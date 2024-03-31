@@ -12,3 +12,17 @@
 :white_check_mark: 4.5 - 5 testów jednostkowych testujące procedury - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/25aa68832fdfba42416394e2ed2a1b0c18a95f2f)
 
 :white_check_mark: 5.0 - Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/25aa68832fdfba42416394e2ed2a1b0c18a95f2f)
+
+**Zadanie 2 - Wzorce architektury**
+
+**Kod**: [2](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/2)
+
+:white_check_mark: 3.0 - Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD - [Commit]()
+
+:white_check_mark: 3.5 - Należy stworzyć skrypty do testów endpointów via curl - [Commit]()
+
+:white_check_mark: 4.0 - Należy stworzyć dwa dodatkowe kontrolery wraz z modelami - [Commit]()
+
+:white_check_mark: 4.5 - Należy stworzyć widoki do wszystkich kontrolerów - [Commit]()
+
+:x: 5.0 - Stworzenie panelu administracyjnego z mockowanym logowaniem - [Commit]()

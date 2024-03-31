@@ -20,10 +20,10 @@ class Product
     private ?string $description = null;
 
     #[ORM\Column]
-    private ?int $category = null;
+    private ?float $price = null;
 
     #[ORM\Column]
-    private ?float $price = null;
+    private ?int $category = null;
 
     #[ORM\Column]
     private ?int $stock = null;
@@ -57,18 +57,6 @@ class Product
         return $this;
     }
 
-    public function getCategory(): ?int
-    {
-        return $this->category;
-    }
-
-    public function setCategory(int $category): static
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
     public function getPrice(): ?float
     {
         return $this->price;
@@ -77,6 +65,18 @@ class Product
     public function setPrice(float $price): static
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getCategory(): ?int
+    {
+        return $this->category;
+    }
+
+    public function setCategory(int $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }
