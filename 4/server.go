@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/labstack/echo/v4"
 	"myapp/controllers"
 	"myapp/database"
 	"myapp/models"
 	"net/http"
+
+	"github.com/labstack/echo/v4"
 )
 
 func main() {
@@ -32,10 +33,9 @@ func main() {
 		}
 	})
 
-	weatherController := controllers.WeatherController{}
-
-	e.GET("/weather/db", weatherController.GetWeathers)
-	e.GET("/weather/db/:city", weatherController.GetWeather)
+	weatherController := controllers.NewWeatherController(DB)
+	e.GET("/weather/db", weatherController.GetWeathersDB)
+	e.GET("/weather/db/:city", weatherController.GetWeatherDB)
 	e.GET("/weather/api/:city", weatherController.GetWeatherApi)
 
 	e.Logger.Fatal(e.Start(":8080"))

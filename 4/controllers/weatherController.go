@@ -1,73 +1,72 @@
 package controllers
 
 import (
-	"encoding/json"
 	"errors"
+	"fmt"
 	"github.com/labstack/echo/v4"
 	"gorm.io/gorm"
-	"io"
+	"myapp/database"
 	"myapp/models"
+	"myapp/proxy"
 	"net/http"
-	"os"
+	"strings"
 )
 
 type WeatherController struct {
+	DB *gorm.DB
 }
 
-type errorResponse struct {
-	Error struct {
-		Message string `json:"message"`
-	} `json:"error"`
+func NewWeatherController(db *gorm.DB) *WeatherController {
+	return &WeatherController{DB: db}
 }
 
-func (wc *WeatherController) GetWeathers(c echo.Context) error {
-	DB := c.Get("weather").(*gorm.DB)
+func (wc *WeatherController) GetWeathersDB(c echo.Context) error {
 	var weathers []models.Weather
-	DB.Find(&weathers)
+	wc.DB.Find(&weathers)
 
 	return c.JSON(200, weathers)
 }
 
-func (wc *WeatherController) GetWeather(c echo.Context) error {
-	city := c.Param("city")
-	DB := c.Get("weather").(*gorm.DB)
+func (wc *WeatherController) GetWeatherDB(c echo.Context) error {
+	cities := strings.Split(c.Param("city"), ",")
 
-	var weather models.Weather
-	if err := DB.Where("city = ?", city).First(&weather).Error; err != nil {
-		if errors.Is(err, gorm.ErrRecordNotFound) {
-			return c.JSON(http.StatusNotFound, map[string]string{"error": "Weather data not found for the city"})
+	var weatherList []models.Weather
+	for _, city := range cities {
+		var weather models.Weather
+		if err := wc.DB.Where("city = ?", city).First(&weather).Error; err != nil {
+			if errors.Is(err, gorm.ErrRecordNotFound) {
+				return c.JSON(http.StatusNotFound, map[string]string{"error": fmt.Sprintf("Weather data not found for the city: %s", city)})
+			}
+			return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to retrieve weather data"})
 		}
-		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to retrieve weather data"})
+
+		weatherList = append(weatherList, weather)
 	}
 
-	return c.JSON(http.StatusOK, weather)
+	if len(cities) == 1 {
+		return c.JSON(http.StatusOK, weatherList[0])
+	}
+
+	return c.JSON(http.StatusOK, weatherList)
 }
 
 func (wc *WeatherController) GetWeatherApi(c echo.Context) error {
-	q := c.Param("city")
-	key := os.Getenv("key")
-	res, err := http.Get("https://api.weatherapi.com/v1/forecast.json?key=" + key + "&q=" + q + "&aqi=no")
+	apiProxy := proxy.NewProxy()
+
+	weatherResponses, err := apiProxy.GetWeatherApi(c)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to fetch weatherResponse data from the external API"})
+		return c.JSON(http.StatusInternalServerError, map[string]string{"error": err.Error()})
 	}
 
-	body, err := io.ReadAll(res.Body)
-	if err != nil {
-		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to read response body"})
-	}
-
-	if res.StatusCode != http.StatusOK {
-		var errorResponse errorResponse
-		if err := json.Unmarshal(body, &errorResponse); err != nil {
-			return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to parse error response"})
+	for _, weatherResponse := range weatherResponses {
+		if err := database.SaveApiData(wc.DB, weatherResponse); err != nil {
+			fmt.Println("Error saving or updating weather data:", err)
 		}
-		return c.JSON(http.StatusBadRequest, map[string]string{"error": errorResponse.Error.Message})
 	}
 
-	var weatherResponse models.WeatherResponse
-	if err := json.Unmarshal(body, &weatherResponse); err != nil {
-		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to parse weatherResponse data"})
+	if len(weatherResponses) == 1 {
+		return c.JSON(http.StatusOK, weatherResponses[0])
 	}
 
-	return c.JSON(http.StatusOK, weatherResponse)
+	return c.JSON(http.StatusOK, weatherResponses)
 }
