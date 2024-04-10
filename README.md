@@ -49,8 +49,8 @@
 
 :white_check_mark: 3.5 Należy stworzyć model Pogoda (lub Giełda) wykorzystując gorm, a dane załadować z listy przy uruchomieniu - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/2f0a5e55a89391a4ea67d10c350925decbb9c7c2)
 
-:white_check_mark: 4.0 Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera - [Commit]()
+:white_check_mark: 4.0 Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/29fc56e76777f95fea39498abe234f1f49c8e055)
 
-:white_check_mark: 4.5 Należy zapisać pobrane dane z zewnątrz do bazy danych - [Commit]()
+:white_check_mark: 4.5 Należy zapisać pobrane dane z zewnątrz do bazy danych - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/29fc56e76777f95fea39498abe234f1f49c8e055)
 
-:white_check_mark: 5.0 Należy rozszerzyć endpoint na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa - [Commit]()
+:white_check_mark: 5.0 Należy rozszerzyć endpoint na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/29fc56e76777f95fea39498abe234f1f49c8e055)
