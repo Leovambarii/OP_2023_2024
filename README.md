@@ -45,9 +45,9 @@
 
 ### **Kod**: [4](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/4)
 
-:white_check_mark: 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Pogody, która pozwala na pobieranie danych o pogodzie (lub akcjach giełdowych) - [Commit]()
+:white_check_mark: 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Pogody, która pozwala na pobieranie danych o pogodzie (lub akcjach giełdowych) - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/1f0956ca974cd1ee1bd42d8e05a172c2bbbfc572)
 
-:white_check_mark: 3.5 Należy stworzyć model Pogoda (lub Giełda) wykorzystując gorm, a dane załadować z listy przy uruchomieniu - [Commit]()
+:white_check_mark: 3.5 Należy stworzyć model Pogoda (lub Giełda) wykorzystując gorm, a dane załadować z listy przy uruchomieniu - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/1f0956ca974cd1ee1bd42d8e05a172c2bbbfc572)
 
 :x: 4.0 Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera
 
