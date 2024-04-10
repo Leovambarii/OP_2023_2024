@@ -11,3 +11,7 @@ https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742
 demo_3_Wzorce_kreacyjne:
 
 https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742/1bfe1d82-3322-48b2-b5ae-7964083f5c24
+
+demo_4_Wzorce_strukturalne
+
+https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742/f21df9df-1367-46f5-962c-27f63c1af238
