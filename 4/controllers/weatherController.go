@@ -69,7 +69,5 @@ func (wc *WeatherController) GetWeatherApi(c echo.Context) error {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to parse weatherResponse data"})
 	}
 
-	weather := models.ConvertWeatherResponseToWeather(weatherResponse)
-
-	return c.JSON(http.StatusOK, weather)
+	return c.JSON(http.StatusOK, weatherResponse)
 }
