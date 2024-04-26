@@ -59,12 +59,12 @@
 
 ### **Kod**: [5](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/5)
 
-3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej - [Commit]()
+3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/9416922fc5ec1f470e7a836a2b486af397757c98)
 
-3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit]()
+3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/9416922fc5ec1f470e7a836a2b486af397757c98)
 
-4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks - [Commit]()
+4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/9416922fc5ec1f470e7a836a2b486af397757c98)
 
-4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit]()
+4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/9416922fc5ec1f470e7a836a2b486af397757c98)
 
 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
