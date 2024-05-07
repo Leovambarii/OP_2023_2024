@@ -73,12 +73,12 @@
 
 ### **Kod**: [6](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/6)
 
-:white_check_mark: 3.0 - Należy dodać eslint w hookach gita
+:white_check_mark: 3.0 - Należy dodać eslint w hookach gita - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/aa187d5fb08120f0ac3e98d21c4a658b5fc10716)
 
-:white_check_mark: 3.5 - Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej)
+:white_check_mark: 3.5 - Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej) - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/aa187d5fb08120f0ac3e98d21c4a658b5fc10716)
 
-:white_check_mark: 4.0 - Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji klienckiej)
+:white_check_mark: 4.0 - Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji klienckiej) - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/aa187d5fb08120f0ac3e98d21c4a658b5fc10716)
 
-:white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji klienckiej)
+:white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji klienckiej) - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/aa187d5fb08120f0ac3e98d21c4a658b5fc10716)
 
-:white_check_mark: 5.0 - Zredukować duplikaty kodu do 0%
+:white_check_mark: 5.0 - Zredukować duplikaty kodu do 0% - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/aa187d5fb08120f0ac3e98d21c4a658b5fc10716)
