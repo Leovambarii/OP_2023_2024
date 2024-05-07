@@ -68,3 +68,17 @@
 :white_check_mark: 4.5 - Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/9416922fc5ec1f470e7a836a2b486af397757c98)
 
 :x: 5.0 - Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
+
+## **Zadanie 6 - Zapaszki Sonar**
+
+### **Kod**: [6](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/6)
+
+:white_check_mark: 3.0 - Należy dodać eslint w hookach gita
+
+:white_check_mark: 3.5 - Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej)
+
+:white_check_mark: 4.0 - Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji klienckiej)
+
+:white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji klienckiej)
+
+:white_check_mark: 5.0 - Zredukować duplikaty kodu do 0%
