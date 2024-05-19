@@ -39,7 +39,7 @@
 
 :white_check_mark: 4.5 - Należy wstrzyknąć singleton do głównej klasy via @Autowired - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/eb1b36f5d2dffb60413240d36081d177289a9595)
 
-:white_check_mark: 5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/eb1b36f5d2dffb60413240d36081d177289a9595)
+:white_check_mark: 5.0 - Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/eb1b36f5d2dffb60413240d36081d177289a9595)
 
 ## **Zadanie 4 - Wzorce strukturalne**
 
@@ -67,7 +67,7 @@
 
 :white_check_mark: 4.5 - Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/9416922fc5ec1f470e7a836a2b486af397757c98)
 
-:x: 5.0 - Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
+:white_check_mark: 5.0 - Należy wykorzystać axios’a oraz dodać nagłówki pod CORS - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/d899bfc3d3bab34199cbd7361cbb8c91dbb9a521)
 
 ## **Zadanie 6 - Zapaszki Sonar**
 
