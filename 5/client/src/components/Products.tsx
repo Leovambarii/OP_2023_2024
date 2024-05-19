@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Product } from '../interfaces/Product';
 import { useCart } from '../contexts/ContextCart';
+import Api from '../api/Api';
 
 const Products: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -8,21 +9,22 @@ const Products: React.FC = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      fetch('http://localhost:8080/products')
-        .then(response => response.json())
-        .then(data => {
-          const convertedProducts: Product[] = data.map((item: any) => ({
-            id: item.ID,
-            name: item.name,
-            description: item.description,
-            price: item.price,
-            quantity: 0
-          }));
-          setProducts(convertedProducts);
-        })
-        .catch(error => console.error('Error fetching products:', error));
-    }
-    
+      try {
+        const response = await Api.get('/products');
+        const data = response.data;
+        const convertedProducts: Product[] = data.map((item: any) => ({
+          id: item.ID,
+          name: item.name,
+          description: item.description,
+          price: item.price,
+          quantity: 0
+        }));
+        setProducts(convertedProducts);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
     fetchProducts();
   }, []);
 
@@ -40,38 +42,30 @@ const Products: React.FC = () => {
       <h2>Available Products</h2>
       <table>
         <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th></th>
-        </tr>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>
-        {products.map((product: Product) => (
-          <tr key={product.id}>
-            <td>{product.name}</td>
-            <td>{product.description}</td>
-            <td>{product.price}</td>
-            <td>
+          {products.map((product: Product) => (
+            <tr key={product.id}>
+              <td>{product.name}</td>
+              <td>{product.description}</td>
+              <td>{product.price}</td>
               {isInCart(product.id) ? (
                 <>
-                  <td>
-                    <button onClick={() => addProductToCart(product)}>Add to Cart</button>
-                  </td>
-                  <td>
-                    <button onClick={() => removeProductFromCart(product.id)}>Remove One</button>
-                  </td>
+                  <td><button onClick={() => addProductToCart(product)}>Add to Cart</button></td>
+                  <td><button onClick={() => removeProductFromCart(product.id)}>Remove One</button></td>
                   <td><span>{` (${getQuantity(product.id)} in cart)`}</span></td>
                 </>
               ) : (
-                <td>
-                  <button onClick={() => addProductToCart(product)}>Add to Cart</button>
-                </td>
+                <td><button onClick={() => addProductToCart(product)}>Add to Cart</button></td>
               )}
-            </td>
-          </tr>
-        ))}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

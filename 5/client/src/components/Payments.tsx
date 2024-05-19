@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Payment } from '../interfaces/Payment';
 import { useCart } from "../contexts/ContextCart";
 import CartComponent from "./CartComponent";
+import Api from '../api/Api';
+import axios from 'axios';
 
 const Payments: React.FC = () => {
   const initialPaymentState: Payment = {
@@ -37,18 +39,20 @@ const Payments: React.FC = () => {
 
     payment.amount = cartTotalAmount.toFixed(2);
 
-    const response = await fetch('http://localhost:8080/payment', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payment),
-    });
-    if (response.ok) {
-      clearCart();
-      setResponse(`Payment successful!`);
-    } else {
-      setResponse(`Failed to make payment! Make sure the card is valid.`);
+    try {
+      const response = await Api.post('/payment', payment);
+      if (response.status === 200) {
+        clearCart();
+        setResponse(`Payment successful!`);
+      } else {
+        setResponse(`Something went wrong...`);
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response) {
+        setResponse(error.response.status === 400 ? 'Failed to make payment! Make sure the card is valid.' : 'Something went wrong...');
+      } else {
+        setResponse('Error while trying to make payment!');
+      }
     }
   };
 
