@@ -17,3 +17,8 @@ https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742
 demo_5_Wzorce_behawioralne
 
 https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742/c92b841d-aec5-4348-a412-525db97e609f
+
+demo_7_Antywzorce
+
+https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742/e3a24a58-3ab6-4fed-b1aa-9f581a782eeb
+
