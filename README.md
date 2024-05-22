@@ -82,3 +82,17 @@
 :white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji klienckiej) - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/aa187d5fb08120f0ac3e98d21c4a658b5fc10716)
 
 :white_check_mark: 5.0 - Zredukować duplikaty kodu do 0% - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/aa187d5fb08120f0ac3e98d21c4a658b5fc10716)
+
+## **Zadanie 7 - Antywzorce Vapor (Swift)**
+
+### **Kod**: [7](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/7)
+
+:white_check_mark: 3.0 - Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w ORM Fluent - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/081de2b12bc432a26955deead05e568d38a443d1)
+
+:x: 3.5 - Należy stworzyć szablony w Leaf
+
+:x: 4.0 - Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją
+
+:x: 4.5 - Należy wykorzystać Redis do przechowywania danych
+
+:x: 5.0 - Wrzucić aplikację na heroku
