@@ -22,3 +22,6 @@ demo_7_Antywzorce
 
 https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742/e3a24a58-3ab6-4fed-b1aa-9f581a782eeb
 
+demo_8_Mobile_first
+
+https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/assets/95575742/2dd690e6-f6f5-49f4-b357-6837624a0941
