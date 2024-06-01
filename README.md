@@ -87,7 +87,7 @@
 
 ### **Kod**: [7](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/7)
 
-:white_check_mark: 3.0 - Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w ORM Fluent - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/081de2b12bc432a26955deead05e568d38a443d1)
+:white_check_mark: 3.0 - Należy stworzyć kontroler wraz z modelem Produktów zgodny z CRUD w ORM Fluent - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/081de2b12bc432a26955deead05e568d38a443d1)
 
 :x: 3.5 - Należy stworzyć szablony w Leaf
 
@@ -96,3 +96,17 @@
 :x: 4.5 - Należy wykorzystać Redis do przechowywania danych
 
 :x: 5.0 - Wrzucić aplikację na heroku
+
+## **Zadanie 8 - Mobile first (Android)**
+
+### **Kod**: [8](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/8)
+
+:white_check_mark: 3.0 - Stworzenie listy kategorii oraz produktów - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/e64f32b6251c61bd57799dbdb135ad1b98cdf7dc)
+
+:white_check_mark: 3.5 - Dodać koszyk - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/e64f32b6251c61bd57799dbdb135ad1b98cdf7dc)
+
+:x: 4.0 - Stworzyć bazę w Realm
+
+:x: 4.5 - Dodać płatności w Stripe
+
+:x: 5.0 - Dodać logowanie i rejestrację via Oauth2
