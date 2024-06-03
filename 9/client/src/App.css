@@ -1,0 +1,105 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: lavender;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2fa;
+    align-items: center;
+}
+
+.App-div {
+    margin-top: 20px;
+    border: 1px solid #8747ba;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #e3e3f6;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+p, span {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    margin-right: 15px;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+ul li a, button {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #8747ba;
+    border-radius: 5px;
+    background-color: #e6cef6;
+}
+
+ul li a:hover, button:hover {
+    background-color: #d5b2ea;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding-right: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container label {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.input-container input {
+    margin-bottom: 10px;
+    background-color: #f2f2fa;
+}
+
+.payment-bttn-div {
+    text-align: center;
+    margin-bottom: 20px;
+}
