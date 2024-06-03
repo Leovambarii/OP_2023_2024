@@ -110,3 +110,17 @@
 :x: 4.5 - Dodać płatności w Stripe
 
 :x: 5.0 - Dodać logowanie i rejestrację via Oauth2
+
+## **Zadanie 9 - Testy**
+
+### **Kod**: [9](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/9)
+
+:white_check_mark: 3.0 - Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala) - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/b59640422d98c95ab6aeebfbefcd84013f6cf113)
+
+:white_check_mark: 3.5 - Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji - [Commit](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/commit/b59640422d98c95ab6aeebfbefcd84013f6cf113)
+
+:x: 4.0 - Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
+
+:x: 4.5 - Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
+
+:x: 5.0 - Należy uruchomić testy funkcjonalne na Browserstacku
