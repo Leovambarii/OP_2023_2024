@@ -1,4 +1,5 @@
-# OP_2023_2024
+# Programowanie_obiektowe_2023_2024
+
 ## **Zadanie 1 - Paradygmaty**
 
 ### **Kod**: [1](https://github.com/Leovambarii/Programowanie_obiektowe_2023_2024/tree/main/1)
